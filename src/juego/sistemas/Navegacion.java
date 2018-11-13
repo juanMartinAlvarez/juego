@@ -8,9 +8,4 @@ import ifts16.pp.juego.sistemas.NavegacionBase;
  * @author Martin
  */
 public class Navegacion extends NavegacionBase {
-
-     public static void comerciar(LugarBase ubicacion) {
-        
-    }
-    
 }

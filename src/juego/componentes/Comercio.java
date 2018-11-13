@@ -16,23 +16,8 @@ public class Comercio extends Componente implements Comerciante {
     public Comercio(){
         //this.comprar = 1;
         //IOBase.ingresarTexto("llego aca");
-        
     }
- /*   
-    public int establecerSalud(int cantidad) {
-        if(!(cantidad > this.saludMaxima)){
-            this.saludActual = cantidad;
-        }else{
-            IOBase.ingresarTexto
-            ("ATENCION: La salud establecida no puede ser mayor que "
-                    + this.saludMaxima
-                    + " se ha establecido por salud máxima el limite maximo (" 
-                    + this.saludMaxima + ")");
-            this.saludActual = this.saludMaxima;
-        }
-    return this.saludActual;
-    }
-*/
+    
     @Override
     public int comprar(Inventariable item) {
         System.out.println("llego");

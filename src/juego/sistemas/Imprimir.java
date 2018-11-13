@@ -12,6 +12,6 @@ public class Imprimir {
     public void mostrarEnPantalla(String txt){
         String texto = "funciona";
         this.txt= texto;
-    IOBase.mostrarTexto(txt);
+        IOBase.mostrarTexto(txt);
     }
 }

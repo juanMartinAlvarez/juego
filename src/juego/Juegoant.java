@@ -22,7 +22,6 @@ public class Juegoant {
     public static void main(String[] args) {
         IOBase ventana = new IOBase();
         EventQueue.invokeLater(ventana);
-        
         Fabrica.crearLugares();
         Fabrica.crearPersonajes();
         LugarBase lugarDeInicio = (LugarBase) RepositorioPrincipal.traer("inicio");
