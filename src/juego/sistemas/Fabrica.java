@@ -76,5 +76,13 @@ public class Fabrica extends FabricaPrincipal {
         RepositorioPrincipal.agregar(Pirata1, "LeChuck");
         LugarBase elBarrio = (LugarBase) RepositorioPrincipal.traer("Barrio pirata");
         elBarrio.agregarLuchador(Pirata1.referencia("LeChuck"));
+        
+        Enemigo Pirata2 = new Enemigo ("Guybrush");
+        RepositorioPrincipal.agregar(Pirata2, "Guybrush");
+        elBarrio.agregarLuchador(Pirata2.referencia("Guybrush"));
+        
+        Enemigo Pirata3 = new Enemigo ("Barba Azul");
+        RepositorioPrincipal.agregar(Pirata3, "Barba Azul");
+        elBarrio.agregarLuchador(Pirata3.referencia("Barba Azul"));
     } 
 }
