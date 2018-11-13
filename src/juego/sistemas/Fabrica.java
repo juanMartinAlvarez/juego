@@ -38,20 +38,26 @@ public class Fabrica extends FabricaPrincipal {
         LugarBase maestro = new LugarBase("La casa del maestro de la espada.", 
         "El maestro entrena para poder desafiar a los piratas");
         
+        LugarBase barrio = new LugarBase("Barrio pirata", 
+        "Barrio donde desafiar a los piratas");
+        
         Fabrica.agregarIdLugar(inicio.getId()); 
         
         inicio.agregarVecino(feria.referencia("Feria, Centro de comercio"));
         inicio.agregarVecino(practica.referencia("Campo de Practica"));
         inicio.agregarVecino(maestro.referencia("La casa del maestro de la espada."));
+        inicio.agregarVecino(barrio.referencia("Barrio pirata"));
         
-        feria.agregarVecino(inicio.referencia("Aldea de inicio"));
+        feria.agregarVecino(inicio.referencia("La aldea de inicio"));
         practica.agregarVecino(inicio.referencia("La aldea de inicio"));
-        maestro.agregarVecino(inicio.referencia("Aldea de inicio"));
+        maestro.agregarVecino(inicio.referencia("La aldea de inicio"));
+        barrio.agregarVecino(inicio.referencia("La aldea de inicio"));
                 
         RepositorioPrincipal.agregar(inicio, "inicio");
         RepositorioPrincipal.agregar(feria, "feria");
         RepositorioPrincipal.agregar(practica, "practica");
         RepositorioPrincipal.agregar(maestro, "La casa del maestro de la espada.");
+        RepositorioPrincipal.agregar(barrio, "Barrio pirata");
     }
     
     public static void crearPersonajes () {
@@ -64,6 +70,11 @@ public class Fabrica extends FabricaPrincipal {
         Enemigo Master = new Enemigo ("swordTeacher");
         RepositorioPrincipal.agregar(Master, "swordTeacher");
         LugarBase LaCasa = (LugarBase) RepositorioPrincipal.traer("La casa del maestro de la espada.");
-        LaCasa.agregarLuchador(Master.referencia("La casa del maestro de la espada."));
+        LaCasa.agregarLuchador(Master.referencia("swordTeacher"));
+        
+        Enemigo Pirata1 = new Enemigo ("LeChuck");
+        RepositorioPrincipal.agregar(Pirata1, "LeChuck");
+        LugarBase elBarrio = (LugarBase) RepositorioPrincipal.traer("Barrio pirata");
+        elBarrio.agregarLuchador(Pirata1.referencia("LeChuck"));
     } 
 }
