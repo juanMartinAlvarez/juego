@@ -10,13 +10,13 @@ import juego.sistemas.Combate;
 public class Enemigo extends PersonajeAbstracto {
     public Combate componenteCombate;
     
-    Enemigo() {
+    public Enemigo() {
         super();
         this.nombre = "Enemigo " + this.getId().toString();
         this.componenteCombate = new Combate();
     }
     
-    Enemigo(String nombre) {
+    public Enemigo(String nombre) {
         super(nombre);
         this.componenteCombate = new Combate();
     }

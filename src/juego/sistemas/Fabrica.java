@@ -4,9 +4,10 @@ import ifts16.pp.juego.entidades.LugarBase;
 import ifts16.pp.juego.entidades.PersonajeAbstracto;
 import ifts16.pp.juego.sistemas.FabricaPrincipal;
 import ifts16.pp.juego.sistemas.RepositorioPrincipal;
+import ifts16.pp.juego.sistemas.NavegacionBase;
 import juego.componentes.Comercio;
+import juego.entidades.Enemigo;
 import juego.entidades.Vendedor;
-
 
 /**
  *
@@ -58,13 +59,11 @@ public class Fabrica extends FabricaPrincipal {
         Vendedor Martin  = new Vendedor("Martin");
         RepositorioPrincipal.agregar(Martin, "martin");
         LugarBase feria = (LugarBase) RepositorioPrincipal.traer("feria");
-        feria.agregarComerciante(Martin.referencia("El vendedor Martin"));
+        feria.agregarComerciante(Martin.referencia("El vendedor Martin"));              
         
-           
-        /*
-        Maestro Jhon = new Maestro ("Jhon");
-        RepositorioPrincipal.agregar(Jhon, "Jhon");
+        Enemigo Master = new Enemigo ("swordTeacher");
+        RepositorioPrincipal.agregar(Master, "swordTeacher");
         LugarBase LaCasa = (LugarBase) RepositorioPrincipal.traer("La casa del maestro de la espada.");
-        LaCasa.*/
+        LaCasa.agregarLuchador(Master.referencia("La casa del maestro de la espada."));
     } 
 }

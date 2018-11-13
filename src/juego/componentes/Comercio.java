@@ -14,13 +14,12 @@ public class Comercio extends Componente implements Comerciante {
     protected int comprar;
     
     public Comercio(){
-        //this.comprar = 1;
-        //IOBase.ingresarTexto("llego aca");
+        
     }
     
     @Override
     public int comprar(Inventariable item) {
-        System.out.println("llego");
+        //System.out.println("llego");
         if(item.cantidad()>=1){
             return item.agregar(comprar);
         }

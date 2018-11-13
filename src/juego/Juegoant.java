@@ -26,6 +26,5 @@ public class Juegoant {
         Fabrica.crearPersonajes();
         LugarBase lugarDeInicio = (LugarBase) RepositorioPrincipal.traer("inicio");
         Navegacion.iniciar(lugarDeInicio);
-    }
-    
+    }   
 }
