@@ -20,7 +20,7 @@ public class Combate extends Componente implements Luchador, Saludable, ConOpcio
     protected int saludMaxima;
     protected Random dado;
     
-    Combate() {
+    public Combate() {
         
         this.dado = new Random();
         this.ataque = 5;

@@ -19,7 +19,7 @@ public class Comercio extends Componente implements Comerciante {
     
     @Override
     public int comprar(Inventariable item) {
-        //System.out.println("llego");
+        
         if(item.cantidad()>=1){
             return item.agregar(comprar);
         }

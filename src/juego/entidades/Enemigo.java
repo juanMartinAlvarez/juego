@@ -1,7 +1,7 @@
 package juego.entidades;
 
 import ifts16.pp.juego.entidades.PersonajeAbstracto;
-import juego.sistemas.Combate;
+import juego.componentes.Combate;
 
 /**
  *
